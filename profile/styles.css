@@ -1,0 +1,52 @@
+/* Write your styles here */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+.profile-page-body header{
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+.profile-page-body section{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.profile-page-body section h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.profile-page-body section input{
+    padding: 10px;
+    margin-bottom: 15px;
+    color: black;
+}
+.profile-page-body section input::placeholder{
+    color: black;
+}
+.profile-page-body form input[type="submit"]{
+    background-color: black;
+    color: white;
+    width: 200px;
+    padding: 10px; 
+    margin-bottom: 15px;
+}
+.profile-page-body section button{
+    background-color: black;
+    color: white;
+    width: 200px;
+    padding: 10px; 
+    margin-bottom: 15px;
+}
+.profile-page-body form{
+    display: flex;
+    flex-direction: column;
+}

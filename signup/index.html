@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="brand">
+          <a href="/">MeShop.</a>
+        </div>
+        <div class="nav-items">
+          <a href="../index.html">Home</a>
+          <a href="../shop/index.html">Shop</a>
+          <a href="../login">Login</a>
+          <a href="">Signup</a>
+          <a href="../cart">My Cart</a>
+        </div>
+    </nav>
+    <main class="signuppage">
+        <h4>Signup</h4>
+        <form onsubmit="handleSignup(event)">
+            <input type="text" id="firstname" placeholder="First Name">
+            <input type="text" id="lastname" placeholder="Last Name">
+            <input type="email" placeholder="Email" id="email" >
+            <input type="password" placeholder="Password" id="password" autocomplete="off">
+            <input type="password" placeholder="Confirm Password" id="confirmpassword" autocomplete="off">
+            <p style="color: red; display: none;" id="pTag"></p>
+            <input type="submit" value="Signup" class="button">
+
+        </form>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

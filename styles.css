@@ -1,0 +1,85 @@
+/* Write styles here */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body 
+{
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+a 
+{
+    color: white;
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  
+    background-color: black;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+  
+nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+nav .nav-items a {
+    margin: 0 1rem;
+}
+.mainpage-div h1{
+    font-size: 50px;
+}
+.mainpage-div p{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.mainpage-btn-container .login{
+    background-color: black;
+    color: white;
+    padding: 0.3rem 3rem;
+    font-size: 20px;
+}
+  
+.mainpage-btn-container .signup{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 0.3rem 3rem;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.mainpage-img-container img{
+    position: absolute;
+    left: 50%;
+    top: 28vh;
+    width: 50%;
+
+}
+@media screen and (max-width:930px) {
+    .mainpage-img-container{
+        display: none;
+    }
+}
+@media screen and (max-width:540px) {
+    *{font-size: 13px;}
+    .mainpage-div h1{
+        font-size: 30px;
+    }
+    .mainpage-div p{
+        font-size: 15px;
+    }
+    .mainpage-btn-container .login{
+        font-size: 15px;
+    }
+    .mainpage-btn-container .signup{
+        font-size: 15px;
+    }
+}
+  

@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+a {
+    color: white;
+    text-decoration: none;
+  }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  
+    background-color: black;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+  
+nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+nav .nav-items a {
+    margin: 0 1rem;
+}
+#displayCartPage .items {
+    display: flex;
+    width: auto;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+#displayCartPage .items .item {
+    border: 1px solid black;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#displayCartPage .items .item img {
+    max-width: 100%;
+    height: 220px;
+    align-self: center;
+  }
+  
+  #displayCartPage .items .item .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #displayCartPage .items .item .info {
+    padding: 1rem;
+  }
+  
+  #displayCartPage .items .item button {
+    width: 100%;
+    border-radius: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  
+  #displayCartPage .items .item .colors {
+    display: flex;
+    margin: 1rem 0;
+  }
+  
+  #displayCartPage .items .item .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 0 5px;
+  }
+  #cartpage-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  #totalDisplay{
+    margin: 1rem 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 300px;
+    background-color: black;
+    color: white;
+    height: 550px;
+  }
+  #totalDisplay p{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #totalDisplay span{
+    align-self: flex-end;
+  }
+  #totalDisplay button{
+    padding: 10px;
+    margin-top: 40px;
+  }
+  #totalDisplay .details-container{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+  .title-price{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  

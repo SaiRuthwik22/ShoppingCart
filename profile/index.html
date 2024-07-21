@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="profile-page-body">
+  <header>
+    <p>Shopping Cart</p>
+    <a href="../shop/index.html">Shop</a>
+  </header>
+  <section>
+    <h1>My Profile</h1>
+    <input type="text" placeholder="First Name" id="firstname">
+    <input type="text" placeholder="Last Name" id="lastname">
+    <button onclick="handleSaveInfo()">Save Info</button>
+    <p id="message" style="display: none;"></p>
+  </section>
+  <section>
+    <h1>Edit Password</h1>
+    <form onsubmit="handleChangePassword(event)">
+      <input type="password" placeholder="Old Password" id="oldpassword" autocomplete="false">
+      <input type="password" placeholder="New Password" id="newpassword1" autocomplete="false">
+      <input type="password" placeholder="Confirm New Password" id="newpassword2" autocomplete="false">
+      <input type="submit" value="Change Password">
+      <p id="message2" style="margin-bottom: 15px; display: none;" ></p>
+    </form>
+    <button onclick="handleLogout()">Logout</button>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html>
