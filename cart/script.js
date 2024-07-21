@@ -6,44 +6,53 @@ function displayCart(){
     let displayCartPage = document.getElementById("displayCartPage")
     let totalDisplay = document.getElementById("totalDisplay")
 
-    let section = document.createElement("section")
-    section.innerHTML = `<title>My Cart</title>`
+    if(userCart.length=0){
+      totalDisplay.style.display = "none"
+      displayCart.innerHTML = "No items Found"
+    }
+    else{
+      let section = document.createElement("section")
+      section.innerHTML = `<title>My Cart</title>`
 
-    displayCartPage.innerHTML = ""
-    totalDisplay.innerHTML =""
-
-    let div1 = document.createElement("div")
-    let div2 = document.createElement("div")
-
-    div1.classList.add("items");
-    div2.classList.add("details-container")
-
-
-    userCart.map((item)=>{
-      div1.innerHTML +=`
-                    <div class="item">
-                  <img src="${item.image}" alt="Item" />
-                  <div class="info">
-                    <div class="title-price">
-                      <div class="title">${item.title}</div>
-                      <div class="price">$${item.price}</div>
+      totalDisplay.style.display = "block"
+  
+      displayCartPage.innerHTML = ""
+      totalDisplay.innerHTML =""
+  
+      let div1 = document.createElement("div")
+      let div2 = document.createElement("div")
+  
+      div1.classList.add("items");
+      div2.classList.add("details-container")
+  
+  
+      userCart.map((item)=>{
+        div1.innerHTML +=`
+                      <div class="item">
+                    <img src="${item.image}" alt="Item" />
+                    <div class="info">
+                      <div class="title-price">
+                        <div class="title">${item.title}</div>
+                        <div class="price">$${item.price}</div>
+                      </div>
                     </div>
+                    <button id="addBtn" onclick="RemovefromCart(${item.id})">Remove from Cart</button>
                   </div>
-                  <button id="addBtn" onclick="RemovefromCart(${item.id})">Remove from Cart</button>
-                </div>
-      `
-      div2.innerHTML += `<p>${item.title} : <span>$${item.price}</span></p>`
-      sum += parseInt(parseFloat(item.price))
-    })
-    section.appendChild(div1)
-    displayCartPage.appendChild(section)
-
-    div2.innerHTML +=`        <hr>
-        <p>Total : <span>$${sum}</span></p>
-        <hr>`
-    totalDisplay.appendChild(div2)
-    totalDisplay.innerHTML +=`<button onclick="checkout(event)" >Pay</button>`
-
+        `
+        div2.innerHTML += `<p>${item.title} : <span>$${item.price}</span></p>`
+        sum += parseInt(parseFloat(item.price))
+      })
+      section.appendChild(div1)
+      displayCartPage.appendChild(section)
+  
+      div2.innerHTML +=`        <hr>
+          <p>Total : <span>$${sum}</span></p>
+          <hr>`
+      totalDisplay.appendChild(div2)
+      totalDisplay.innerHTML +=`<button onclick="checkout(event)" >Pay</button>`
+  
+  
+    }
 
 }
 function RemovefromCart(id){
